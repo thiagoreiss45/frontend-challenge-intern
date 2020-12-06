@@ -161,8 +161,8 @@ header{
 }
 
 .cardImg {
-    height: 11rem;
-    width: 11rem;
+    height: 9rem;
+    width: 9rem;
 }
 .cardBody{
     display: flex;
@@ -316,14 +316,16 @@ footer p{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin:0 0.9rem;
     }
     #section-info #signUp {
         width: 100%;
-        
+        padding:0;
     }
     #article-info{
         width: 100%;
         margin-bottom: 2rem;
+        padding:0;
     }
     #news-contact{
         flex-direction: column;
