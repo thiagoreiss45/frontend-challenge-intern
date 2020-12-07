@@ -27,7 +27,7 @@ body button:hover{
     background-color: #e4e4e4;
 }
 
-/* header */
+/* --------------------------header --------------------------*/
 
 header{
     height:100%;
@@ -87,7 +87,7 @@ header{
     color: #888888;
 }
 
-/* section Lorem ipsum */
+/* -------------------------- section Lorem ipsum --------------------------*/
 
 #sectionInfo{
     flex-direction: row;
@@ -186,7 +186,7 @@ header{
 }
 
 
- /* product card */
+ /*-------------------------- product card-------------------------- */
 
 #procutSelection {
     display: flex;
@@ -290,7 +290,7 @@ header{
     background-color: #e4e4e4;
 }
 
-/* share with friends */
+/*-------------------------- share with friends-------------------------- */
 
 #news{
     display: flex;
@@ -348,7 +348,7 @@ header{
     background-color: #e4e4e4;
 }
 
-/* footer */
+/*-------------------------- footer-------------------------- */
 
 footer{
     background: linear-gradient(-3deg, rgba(112,112,112,1) 60%, rgba(255,255,255,1) 60.4%);
@@ -365,7 +365,7 @@ footer p{
     margin-top: 13rem;
 }
 
-/* mobile responsiveness */
+/* --------------------------mobile responsiveness --------------------------*/
 
 @media (max-width:400px){
     .btn{
@@ -452,6 +452,13 @@ footer p{
 
 @media (max-width: 720px){
     #products {
+        grid-template-columns: repeat(2, 13rem);
+    }
+}
+
+@media(max-width: 770px) and (min-width:570px){
+    .headerButton{
+        display: grid;
         grid-template-columns: repeat(2, 13rem);
     }
 }
