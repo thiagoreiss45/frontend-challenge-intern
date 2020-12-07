@@ -16,7 +16,7 @@
                 navegação. Aproveite!</p>
             </div>
             <div class="header-button">
-                <button class="btn">Conheça a Linx</button>
+                <a href="https://www.linx.com.br/quem-somos/"><button class="btn">Conheça a Linx</button></a>
                 <a href="#article-info"><button class="btn">Ajude o algorítimo</button></a>
                 <a href="#specialSelection"><button class="btn">Seus produtos</button></a>
                 <a href="#news"><button class="btn">Compartilhe</button></a>
@@ -25,8 +25,8 @@
 
         <div id="section-info">
             <article id="article-info">
-                <h3>Ajude o algorítimo a ser mais certeiro</h3>
-                <p>
+                <h3>Ajude o algorítimo a ser mais certeiro<button id="hide-button"> <i class="arrow down"></i></h3></button>
+                <p id="box" class="box">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Pellentesque ultricies tellus nec mi porta convallis sollicitudin eu urna. 
                     Mauris rhoncus erat sed interdum dignissim. Suspendisse semper pretium consectetur.
@@ -38,24 +38,25 @@
                     Quisque ut neque mattis, consequat velit ut, ultrices orci. Nulla varius elementum erat vel pharetra. 
                     Aenean sit amet nisi diam. Morbi viverra, magna ac luctus commodo, odio ante suscipit libero, at mattis augue est vel metus.
                 </p>
+                
             </article>
             <form action="" id="signUp">
                 <span class="formField">
                     <label for="userName">Seu nome:</label>
-                    <input type="text" name="userName" id="userName">
+                    <input type="text" name="userName" id="userName" required>
                 </span>
                 <span class="formField">
                     <label for="userEmail">E-mail:</label>
-                    <input type="email" name="userEmail" id="userEmail">
+                    <input type="email" name="userEmail" id="userEmail" required>
                 </span>
                 <span class="formField">
                     <label for="userCPF">CPF:</label>
                     <input type="text" name="userCPF" id="userCPF" pattern="\d{3}.\d{3}.\d{3}-\d{2}">
                 </span>
                 <span class="radio">
-                    <input type="radio" name="userGender" id="male" value="male">
+                    <input type="radio" name="userGender" id="male" value="male" required>
                     <label style="padding-right: 1rem;" for="male">Masculino</label>
-                    <input type="radio" name="userGender" id="female" value="female">
+                    <input type="radio" name="userGender" id="female" value="female" required>
                     <label for="female">Feminino</label>
                 </span>
                 <button type="submit">Enviar</button>
@@ -68,22 +69,22 @@
             <button id="showMoreProducts">Ainda mais produtos aqui!</button>
         </div>
 
-        <div id="news">
+        <form action="" id="news">
             <div class="contentTitle">Compartilhe a novidade</div>
             <p>Quer que seus amigos também ganhem a lista personalizada deles? Preencha agora!</p>
             <div id="news-contact">
                 <span class="formField">
                     <label for="userName">Nome do seu amigo:</label>
-                    <input type="text" name="userName" id="userName">
+                    <input type="text" name="userName" id="userName" required>
                 </span>
                 <span class="formField">
                     <label for="userEmail">E-mail:</label>
-                    <input type="email" name="userEmail" id="userEmail">
+                    <input type="email" name="userEmail" id="userEmail" required>
                 </span>
                 
             </div>
             <button type="submit">Enviar agora</button>
-        </div>
+        </form>
         
         <footer>
             <p>Testando suas habilidades em HTML, CSS e JS.<br><br> Linx Impulse <br><br>2019</p>
