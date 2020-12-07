@@ -4,7 +4,29 @@ let nextPage
 fetchProducts(URL)
 
 document.getElementById('showMoreProducts').addEventListener('click', showMoreProducts)
+let box = document.getElementById('box'),
+    btn = document.getElementById("hide-button")
 
+
+
+function arrowToggle () {
+    if (box.classList.contains('hidden')) {
+      box.classList.remove('hidden');
+      setTimeout(function () {
+        box.classList.remove('visuallyhidden');
+      }, 20);
+    } else {
+      box.classList.add('visuallyhidden');    
+      box.addEventListener('transitionend', function(e) {
+        box.classList.add('hidden');
+      }, {
+        capture: false,
+        once: true,
+        passive: false
+      });
+    }
+    
+}
 function createCard(product) {
     let card = document.createElement("div")
     card.className = "card"
@@ -28,7 +50,8 @@ async function fetchProducts(endpoint) {
     nextPage = "https://" + data.nextPage
     products.forEach(createCard)
 }
+
 function showMoreProducts(){
     fetchProducts(nextPage)
 }
-
+btn.addEventListener('click', arrowToggle,false);
