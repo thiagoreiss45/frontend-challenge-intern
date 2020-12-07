@@ -15,8 +15,14 @@ html, body {
 :root {
     font-size: 100%;
 }
-button{
-    cursor: pointer
+
+
+body button{
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+body button:hover{
+    background-color: #e4e4e4;
 }
 header{
     height:100%;
@@ -69,6 +75,7 @@ header{
     margin: 1rem;
     text-align: center;
     letter-spacing: 0px;
+    
     color: #888888;
 }
 
@@ -84,8 +91,40 @@ header{
     padding: 0 1.9rem;
     
 }
+.arrow {
+    border: solid #707070;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 5px;
+  }
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+#hide-button{
+    max-height: 4rem;
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    right: 21px;
+    position: absolute;
+    outline: none;
+}
+.box{
+    transition: all 1s linear;
+    display: block;
+}
+.hidden {
+    display: none;
+  }
+  
+.visuallyhidden {
+    opacity: 0;
+ }
 #article-info h3{
-    width: 60%;
+
     font-weight: normal;
     padding-bottom: 2rem;
 }
@@ -114,12 +153,15 @@ header{
     height: 2.2rem;
     border: 0.1rem solid #707070;
     border-radius: 0.4rem;
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #888888;
+    transition-duration: 0.4s;
     cursor: pointer;
     background: none;
 }
-
+#section-info #signUp button:hover{
+    background-color: #e4e4e4;
+}
 
 #specialSelection {
     display: flex;
@@ -201,10 +243,7 @@ header{
     border-radius: 0.4rem;
     font-size: 0.98rem;
     color:#888888;
-    transition-duration: 0.7s;
-}
-.card button:hover{
-	background-color: #d3d3d3;
+    transition-duration: 0.4s;
 }
 
 
@@ -217,9 +256,12 @@ header{
     border: 0.1rem solid #707070;
     border-radius: 0.4rem;
     font-size: 1rem;
+    transition-duration: 0.4s;
     color: #888888;
 }
-
+#showMoreProducts:hover{
+    background-color: #e4e4e4;
+}
 
 #news{
     display: flex;
@@ -265,12 +307,15 @@ header{
     height: 2.2rem;
     border: 0.1rem solid #707070;
     border-radius: 0.4rem;
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #888888;
-    cursor: pointer;
+    cursor: pointer;    
+    transition-duration: 0.4s;
     background: none;
 }
-
+#news button:hover{
+    background-color: #e4e4e4;
+}
 
 
 footer{
@@ -281,7 +326,7 @@ footer{
     justify-content: center;
     text-align: center;
     color:white;
-    font-size: 0.9rem;
+    font-size: 0.7rem;
 }
 footer p{
     margin-top: 13rem;
@@ -291,7 +336,10 @@ footer p{
 
 
 
-
+/* button:hover{
+	background-color: #e4e4e4;
+}
+ */
 
 
 
@@ -304,9 +352,21 @@ footer p{
         width: 8rem;
     }
 }
+@media (min-width: 500px){
+    #hide-button{
+        display:none
+    }
+    .visuallyhidden {
+        opacity: 1;
+    }
+    .hidden {
+        display: block;
+    }
+}
 @media (max-width: 500px){
     header{
         text-align: left; 
+        padding-bottom: 4rem;
         background: linear-gradient(199deg, rgba(112,112,112,1) 64%, rgba(255,255,255,1) 64.4%);
     }
     .header-text{
@@ -327,6 +387,10 @@ footer p{
         margin-bottom: 2rem;
         padding:0;
     }
+    #article-info h3{
+        width: 100%;
+        font-size: 1.4rem;
+    }
     #news-contact{
         flex-direction: column;
         justify-content: center;
@@ -334,19 +398,8 @@ footer p{
     #news-contact .formField{
         width: auto;
         padding-bottom: 1rem;
+        margin:0 0.7rem;
     }
-}
-@media (max-width: 920px){
-    #products {
-        grid-template-columns: repeat(3, 13rem);
-    }
-}
-@media (max-width: 720px){
-    #products {
-        grid-template-columns: repeat(2, 13rem);
-    }
-}
-@media (max-width: 500px){
     #products {
         grid-template-columns: repeat(1, 13rem);
         width: 92%;
@@ -360,5 +413,22 @@ footer p{
         display: grid;
         margin-bottom: 3.5rem;
         grid-template-columns: 1fr 1fr;
+    }
+    footer{
+        background: linear-gradient(-7deg, rgba(112,112,112,1) 48%, rgba(255,255,255,1) 48.4%);
+        
+    }
+    footer p {
+        margin-top: 15rem;
+    }
+}
+@media (max-width: 920px){
+    #products {
+        grid-template-columns: repeat(3, 13rem);
+    }
+}
+@media (max-width: 720px){
+    #products {
+        grid-template-columns: repeat(2, 13rem);
     }
 }
